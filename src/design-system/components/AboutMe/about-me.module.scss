@@ -1,0 +1,21 @@
+.about-me {
+  display: flex;
+  gap: 1rem;
+
+  &__image {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 1rem;
+    border-radius: 16px;
+  }
+
+  &__title {
+    font-size: 1.6rem;
+  }
+
+  &__rich-text_container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
