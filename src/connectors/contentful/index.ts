@@ -7,9 +7,11 @@ const client = createClient({
   space: space_id || "",
   accessToken: access_token || "",
   headers: {
-    "Cache-Control": "no-cache, no-store, must-revalidate",
-    cache: "no-store",
+    next: {
+      revalidate: 5,
+    },
   },
+  
 });
 
 export default client;
