@@ -1,0 +1,18 @@
+@import "@/design-system/styles/mixin.scss";
+
+.header {
+  background-color: var(--backgroud-color-light);
+  height: 80px;
+  display: flex;
+  align-items: center;
+
+  &__container {
+    @include main-container;
+  }
+
+  &__title {
+    color: var(--title-color);
+    font-size: var(--font-size-xxl);
+    font-weight: 800;
+  }
+}
