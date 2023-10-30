@@ -4,6 +4,7 @@ import { PageHome } from "@/domain/models";
 class ContentfulPage {
   homePageId = "7crGJXefF4mDkLckuTKmHd";
   postsId = "1YD9XPxtXBu4BBEqODsYrv";
+  footerId = "1PCXWqZPPzPGdZcZpMHXKq";
 
   async getHomePage(): Promise<PageHome> {
     const entry = await client.getEntry(this.homePageId);
@@ -15,6 +16,12 @@ class ContentfulPage {
     const posts = await client.getEntry(this.postsId);
 
     return posts;
+  }
+
+  async getFooter(): Promise<any> {
+    const footer = await client.getEntry(this.footerId);
+
+    return footer.fields;
   }
 }
 

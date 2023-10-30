@@ -14,13 +14,13 @@
 
   &__title {
     color: var(--title-color);
-    font-size: 1.5rem;
+    font-size: var(--font-size-xxl);
     font-weight: 800;
   }
 
   &__text {
     color: var(--text-color);
-    font-size: 0.9rem;
+    font-size: var(--font-size-md);
     font-weight: 500;
   }
 

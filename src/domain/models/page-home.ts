@@ -1,3 +1,4 @@
+import { Footer } from ".";
 import { AboutMe } from "./about-me";
 import { Posts } from "./posts";
 
@@ -7,4 +8,5 @@ export type PageHome = {
   headline: string;
   sections: AboutMe[];
   posts: Posts;
+  footer: Footer;
 };

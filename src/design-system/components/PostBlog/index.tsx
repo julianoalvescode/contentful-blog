@@ -3,6 +3,7 @@ import { PostBlogProps } from "./types";
 import styles from "./post-blog.module.scss";
 
 import Image from "next/image";
+import { AvatarInfo } from "..";
 
 export function PostBlog({
   fields: {
@@ -37,6 +38,9 @@ export function PostBlog({
         </div>
         <div className={styles["post-blog__container"]}>
           <h1 className={styles["post-blog__title"]}>{title}</h1>
+          <div>
+            <AvatarInfo />
+          </div>
           <p className={styles["post-blog__text"]}>{resume}</p>
 
           <div

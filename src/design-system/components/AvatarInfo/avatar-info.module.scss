@@ -1,0 +1,26 @@
+.avatar-info {
+  display: flex;
+  gap: 8px;
+
+  &__name {
+    font-size: var(--font-size-md);
+    color: var(--footer-color);
+  }
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  &__position {
+    font-size: var(--font-size-xs);
+    color: var(--footer-color);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

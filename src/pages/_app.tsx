@@ -3,6 +3,7 @@ import "@/design-system/styles/globals.scss";
 
 import { Inter } from "next/font/google";
 import Head from "next/head";
+import { Footer } from "@/design-system/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
