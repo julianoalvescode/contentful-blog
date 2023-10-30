@@ -1,9 +1,5 @@
+@import "@/design-system/styles/mixin.scss";
+
 .main {
-  height: 100vh;
-  width: 100vw;
-  margin: 0 auto;
-  max-width: 1200px;
-  width: 100%;
-  padding: 0px 24px;
-  margin-bottom: 2rem;
+  @include main-container;
 }

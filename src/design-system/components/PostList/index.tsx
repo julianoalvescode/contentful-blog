@@ -14,6 +14,7 @@ export function PostList({ posts }: PostListProps) {
             title={post?.fields?.title}
             key={index}
             createdAt={post?.sys?.createdAt}
+            internalName={post?.fields?.internalName}
           />
         );
       })}

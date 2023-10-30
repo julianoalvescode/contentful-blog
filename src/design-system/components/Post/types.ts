@@ -3,4 +3,5 @@ export type PostProps = {
   resume: string;
   id: number;
   createdAt: string;
+  internalName: string;
 };
