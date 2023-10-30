@@ -3,6 +3,7 @@ import { Post } from "@/domain/models";
 
 import styles from "./blog.module.scss";
 import Head from "next/head";
+import { PostBlog } from "@/design-system/components";
 
 export default function SlugPost({ post }: { post: Post }) {
   return (
@@ -11,7 +12,7 @@ export default function SlugPost({ post }: { post: Post }) {
         <title>{post?.fields?.title}</title>
       </Head>
       <main className={styles.main}>
-        <h1>Ola</h1>
+        <PostBlog {...post} />
       </main>
     </>
   );

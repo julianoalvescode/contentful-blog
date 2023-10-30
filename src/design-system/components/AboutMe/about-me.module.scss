@@ -23,11 +23,13 @@
 
   &__title {
     font-size: 1.6rem;
+    color: var(--title-color);
   }
 
   &__rich-text_container {
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    color: rgb(206, 206, 206);
   }
 }

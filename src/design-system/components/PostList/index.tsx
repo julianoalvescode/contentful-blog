@@ -9,7 +9,7 @@ export function PostList({ posts }: PostListProps) {
       {posts?.fields?.posts?.map((post, index) => {
         return (
           <Post
-            id={index}
+            id={index + 1}
             resume={post?.fields?.resume}
             title={post?.fields?.title}
             key={index}

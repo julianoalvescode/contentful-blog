@@ -5,6 +5,8 @@ import styles from "./blog.module.scss";
 import { PageHome } from "@/domain/models";
 
 export default function Blog({ title, sections, posts }: PageHome) {
+  console.log(posts);
+
   return (
     <>
       <Head>

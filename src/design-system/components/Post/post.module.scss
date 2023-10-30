@@ -13,19 +13,19 @@
   }
 
   &__title {
-    color: rgb(20, 23, 26);
+    color: var(--title-color);
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 800;
   }
 
   &__text {
-    color: rgb(57, 58, 59);
+    color: var(--text-color);
     font-size: 0.9rem;
     font-weight: 500;
   }
 
   &__date {
-    color: rgb(110, 119, 129);
+    color: var(--primary-color);
     font-size: 0.85rem;
   }
 }

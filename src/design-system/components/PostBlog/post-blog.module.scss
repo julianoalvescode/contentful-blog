@@ -1,0 +1,27 @@
+.post-blog {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 24px;
+  background-color: var(--backgroud-color-light);
+  border-radius: 8px 8px 0 0;
+
+  &__container {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--title-color);
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--text-color);
+  }
+}
