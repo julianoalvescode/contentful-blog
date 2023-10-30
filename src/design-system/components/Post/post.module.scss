@@ -1,0 +1,25 @@
+.post {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(214, 214, 214);
+  padding-bottom: 24px;
+
+  &__title {
+    color: rgb(20, 23, 26);
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__text {
+    color: rgb(57, 58, 59);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  &__date {
+    color: rgb(110, 119, 129);
+    font-size: 0.85rem;
+  }
+}

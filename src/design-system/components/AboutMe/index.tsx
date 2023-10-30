@@ -1,6 +1,7 @@
 import { AboutMe } from "@/domain/models";
 
 import styles from "./about-me.module.scss";
+import Image from "next/image";
 
 export function AboutMe({
   fields: {
@@ -21,7 +22,14 @@ export function AboutMe({
     <>
       <section className={styles["about-me"]}>
         <div>
-          <img className={styles["about-me__image"]} src={url} alt="" />
+          <Image
+            height={300}
+            width={300}
+            className={styles["about-me__image"]}
+            src={`http:${url}`}
+            alt=""
+            quality={80}
+          />
         </div>
         <div className={styles["about-me__rich-text_container"]}>
           <h1 className={styles["about-me__title"]}>{title}</h1>
