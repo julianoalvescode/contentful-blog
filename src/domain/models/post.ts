@@ -33,5 +33,5 @@ export type Post = {
 type Content = {
   content: {
     value: string;
-  };
+  }[];
 };

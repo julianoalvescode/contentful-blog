@@ -1,6 +1,6 @@
 .avatar-info {
   display: flex;
-  gap: 8px;
+  gap: var(--spacing-lg);
 
   &__name {
     font-size: var(--font-size-md);

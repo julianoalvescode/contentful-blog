@@ -38,16 +38,26 @@ export function PostBlog({
         </div>
         <div className={styles["post-blog__container"]}>
           <h1 className={styles["post-blog__title"]}>{title}</h1>
+          <p className={styles["post-blog__text"]}>{resume}</p>
           <div>
             <AvatarInfo />
           </div>
-          <p className={styles["post-blog__text"]}>{resume}</p>
 
-          <div
-            dangerouslySetInnerHTML={{
-              __html: postContent?.content[0].content?.value,
-            }}
-          />
+          {postContent?.content?.map((item) => {
+            return item?.content?.map((item, index) => {
+              return (
+                <>
+                  <div
+                    key={index}
+                    className={styles["post-blog__richText"]}
+                    dangerouslySetInnerHTML={{
+                      __html: item.value,
+                    }}
+                  />
+                </>
+              );
+            });
+          })}
         </div>
       </div>
     </>
