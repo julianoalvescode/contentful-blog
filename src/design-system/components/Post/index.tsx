@@ -13,15 +13,15 @@ export function Post({
 }: PostProps) {
   return (
     <>
-      <article className={styles.post}>
-        <div className={styles["post__info-container"]}>
-          <Link href={`/blog/${internalName}`}>
+      <Link href={`/blog/${internalName}`}>
+        <article className={styles.post}>
+          <div className={styles["post__info-container"]}>
             <h1 className={styles["post__title"]}>{`${id}. ${title}`}</h1>
-          </Link>
-          <p className={styles["post__date"]}>{humanizeDate(createdAt)}</p>
-        </div>
-        <p className={styles["post__text"]}>{resume}</p>
-      </article>
+            <p className={styles["post__date"]}>{humanizeDate(createdAt)}</p>
+          </div>
+          <p className={styles["post__text"]}>{resume}</p>
+        </article>
+      </Link>
     </>
   );
 }
