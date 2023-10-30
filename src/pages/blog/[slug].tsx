@@ -4,6 +4,7 @@ import { Post } from "@/domain/models";
 import styles from "./blog.module.scss";
 import Head from "next/head";
 import { PostBlog } from "@/design-system/components";
+import { GetStaticProps, GetStaticPropsContext } from "next";
 
 export default function SlugPost({ post }: { post: Post }) {
   return (
@@ -18,11 +19,11 @@ export default function SlugPost({ post }: { post: Post }) {
   );
 }
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getStaticProps({ params }: GetStaticPropsContext) {
   const posts = await contentfulService.getPosts();
 
   const post = posts?.fields?.posts?.find(
-    (post: Post) => post.fields?.internalName === slug
+    (post: Post) => post.fields?.internalName === params?.slug
   );
 
   return {
