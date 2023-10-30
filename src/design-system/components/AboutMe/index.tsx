@@ -21,7 +21,7 @@ export function AboutMe({
   return (
     <>
       <section className={styles["about-me"]}>
-        <div>
+        <div className={styles["about-me__image_container"]}>
           <Image
             height={300}
             width={300}
