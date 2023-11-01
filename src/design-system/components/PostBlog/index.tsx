@@ -5,7 +5,7 @@ import styles from "./post-blog.module.scss";
 import Image from "next/image";
 import { AvatarInfo } from "..";
 
-import { RenderRichText } from "@/design-system/components";
+import { RenderRichText, CreatedInfo } from "@/design-system/components";
 
 export function PostBlog({
   fields: {
@@ -19,6 +19,7 @@ export function PostBlog({
       },
     },
   },
+  sys: { createdAt },
 }: PostBlogProps) {
   return (
     <>
@@ -40,6 +41,7 @@ export function PostBlog({
         </div>
         <div className={styles["post-blog__container"]}>
           <h1 className={styles["post-blog__title"]}>{title}</h1>
+          <CreatedInfo date={createdAt} />
           <p className={styles["post-blog__text"]}>{resume}</p>
           <div>
             <AvatarInfo />
