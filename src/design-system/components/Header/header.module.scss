@@ -2,17 +2,33 @@
 
 .header {
   background-color: var(--backgroud-color-light);
-  height: 80px;
   display: flex;
   align-items: center;
+  padding: var(--spacing-md) 0;
 
   &__container {
     @include main-container;
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: var(--spacing-xs);
+    }
   }
 
   &__title {
     color: var(--title-color);
     font-size: var(--font-size-xxl);
     font-weight: 800;
+  }
+
+  &__signIn {
+    color: #fff;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: 4px;
+    background: var(--primary-color);
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    cursor: pointer;
   }
 }

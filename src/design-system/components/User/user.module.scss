@@ -1,0 +1,30 @@
+@import "@/design-system/styles/mixins.scss";
+
+.user {
+  display: flex;
+  gap: var(--spacing-xxs);
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+
+  &__avatar {
+    @include avatar-icon;
+  }
+
+  &__email {
+    font-size: var(--font-size-xs);
+  }
+
+  &__signOut {
+    font-size: var(--font-size-sm);
+    color: var(--button-color);
+    cursor: pointer;
+    background: none;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xxs);
+  }
+}

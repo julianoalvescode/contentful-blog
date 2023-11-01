@@ -6,3 +6,4 @@ export * from "./AvatarInfo";
 export * from "./Header";
 export * from "./RenderRichText";
 export * from "./CreatedInfo";
+export * from "./User";
