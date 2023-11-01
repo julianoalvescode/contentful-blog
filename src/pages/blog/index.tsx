@@ -13,7 +13,7 @@ export default function Blog({ title, sections, posts, footer }: PageHome) {
       </Head>
       <Header />
       <main className={styles.main}>
-        <AboutMe {...sections[0]} />
+        {sections.length > 0 && <AboutMe {...sections[0]} />}
         <PostList posts={posts} />
       </main>
       <Footer description={footer?.description} />
@@ -26,7 +26,7 @@ export async function getStaticProps() {
   const footer = await contentfulService.getFooter();
   const { title, sections } = await contentfulService.getHomePage();
 
-  if (!title || !sections) {
+  if (!title) {
     return {
       notFound: true,
     };
@@ -35,7 +35,7 @@ export async function getStaticProps() {
   return {
     props: {
       title,
-      sections,
+      sections: sections ?? [],
       posts,
       footer,
     },
