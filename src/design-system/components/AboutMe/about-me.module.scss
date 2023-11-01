@@ -21,13 +21,6 @@
     border-radius: 16px;
   }
 
-  &__title {
-    font-size: 1.6rem;
-    color: var(--title-color);
-    font-size: var(--font-size-xxl);
-    font-weight: 800;
-  }
-
   &__rich-text_container {
     display: flex;
     flex-direction: column;

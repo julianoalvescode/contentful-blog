@@ -11,7 +11,7 @@ export function AvatarInfo() {
           />
         </div>
         <div className={styles["avatar-info__container"]}>
-          <h4 className={styles["avatar-info__name"]}>Juliano Alves</h4>
+          <h4>Juliano Alves</h4>
           <p className={styles["avatar-info__position"]}>Front-end Developer</p>
         </div>
       </section>

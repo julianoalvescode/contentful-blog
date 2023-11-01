@@ -33,7 +33,7 @@ export function AboutMe({
           />
         </div>
         <div className={styles["about-me__rich-text_container"]}>
-          <h1 className={styles["about-me__title"]}>{title}</h1>
+          <h1>{title}</h1>
           <RenderRichText richText={content[0]} />
         </div>
       </section>

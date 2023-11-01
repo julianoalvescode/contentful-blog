@@ -11,16 +11,4 @@
     gap: 4px;
     flex-direction: column;
   }
-
-  &__title {
-    color: var(--title-color);
-    font-size: var(--font-size-xxl);
-    font-weight: 800;
-  }
-
-  &__text {
-    color: var(--text-color);
-    font-size: var(--font-size-md);
-    font-weight: 500;
-  }
 }
