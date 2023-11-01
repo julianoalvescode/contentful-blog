@@ -5,6 +5,8 @@ import styles from "./post-blog.module.scss";
 import Image from "next/image";
 import { AvatarInfo } from "..";
 
+import { RenderRichText } from "@/design-system/components";
+
 export function PostBlog({
   fields: {
     title,
@@ -43,21 +45,9 @@ export function PostBlog({
             <AvatarInfo />
           </div>
 
-          {postContent?.content?.map((item) => {
-            return item?.content?.map((item, index) => {
-              return (
-                <>
-                  <div
-                    key={index}
-                    className={styles["post-blog__richText"]}
-                    dangerouslySetInnerHTML={{
-                      __html: item.value,
-                    }}
-                  />
-                </>
-              );
-            });
-          })}
+          <div className={styles["post-blog__richText"]}>
+            <RenderRichText richText={postContent} />
+          </div>
         </div>
       </div>
     </>

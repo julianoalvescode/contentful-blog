@@ -2,6 +2,7 @@ import { AboutMe } from "@/domain/models";
 
 import styles from "./about-me.module.scss";
 import Image from "next/image";
+import { RenderRichText } from "@/design-system/components";
 
 export function AboutMe({
   fields: {
@@ -33,9 +34,7 @@ export function AboutMe({
         </div>
         <div className={styles["about-me__rich-text_container"]}>
           <h1 className={styles["about-me__title"]}>{title}</h1>
-          <div
-            dangerouslySetInnerHTML={{ __html: content[0].content[0].value }}
-          />
+          <RenderRichText richText={content[0]} />
         </div>
       </section>
     </>
