@@ -5,6 +5,10 @@ import styles from "./user.module.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
 
 export function User(params: UserProps) {
+  if (!params.user?.image || !params.user?.name || !params.user?.email) {
+    return;
+  }
+
   return (
     <>
       <nav className={styles.user}>
