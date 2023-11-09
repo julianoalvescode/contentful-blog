@@ -18,7 +18,7 @@ export function Header() {
             <>
               <button
                 className={styles["header__signIn"]}
-                onClick={() => signIn()}
+                onClick={() => signIn("github")}
               >
                 Login
               </button>
